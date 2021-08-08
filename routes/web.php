@@ -18,3 +18,7 @@ use Illuminate\Support\Facades\Route;
  * ダッシュボード表示
  */
 Route::get('/',[BookController::class,'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
